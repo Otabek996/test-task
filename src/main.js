@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import i18n from "@/plugins/i18n";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
+import "@popperjs/core";
 
 import BootstrapVue3 from "bootstrap-vue-3";
 import "bootstrap/dist/css/bootstrap.css";
