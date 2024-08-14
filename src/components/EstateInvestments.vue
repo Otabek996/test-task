@@ -28,7 +28,7 @@
           /></span>
         </p>
 
-        <button class="investments-button" type="button">Подробнее</button>
+        <MainButton text="Click me" />
       </div>
 
       <div class="investments-pictures">
@@ -40,8 +40,14 @@
 </template>
 
 <script>
+import MainButton from "./MainButton.vue";
+
 export default {
   name: "EstateInvestments",
+
+  components: {
+    MainButton,
+  },
 };
 </script>
 
@@ -76,24 +82,6 @@ export default {
   line-height: var(--twenty-line-height);
   font-weight: 400;
   margin: 50px 0 40px 0;
-}
-
-.investments-button {
-  font-size: var(--btn-size);
-  line-height: var(--btn-line-height);
-  font-weight: 600;
-  color: var(--white-color);
-  background-color: var(--beigie-100-color);
-  padding: 12px 65px;
-  transition: 0.1s linear;
-}
-
-.investments-button:hover {
-  background-color: var(--beigie-70-color);
-}
-
-.investments-button:focus {
-  background-color: var(--beigie-120-color);
 }
 
 .investments-pictures {
