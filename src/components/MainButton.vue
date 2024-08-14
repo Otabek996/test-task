@@ -1,5 +1,8 @@
 <template>
-  <button class="main-button" type="button">{{ text }}</button>
+  <div>
+    <button class="main-button" type="button" v-if="!Boolean(type)">{{ text }}</button>
+    <button class="main-button" :type="type" v-if="Boolean(type)">{{ text }}</button>
+  </div>
 </template>
 
 <script>
@@ -8,6 +11,10 @@ export default {
 
   props: {
     text: {
+      type: String,
+      required: true,
+    },
+    type: {
       type: String,
       required: true,
     },

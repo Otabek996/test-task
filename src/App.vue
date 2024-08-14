@@ -7,6 +7,7 @@
     <PropertyManagement />
     <WhyUs />
     <NewBuildings />
+    <CalculateMortgage />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
@@ -19,6 +20,7 @@ import EstateInvestmentsVue from "./components/EstateInvestments.vue";
 import PropertyManagement from "./components/PropertyManagement.vue";
 import WhyUs from "./components/WhyUs.vue";
 import NewBuildings from "./components/NewBuildings.vue";
+import CalculateMortgage from "./components/CalculateMortgage.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
@@ -31,6 +33,7 @@ export default {
     PropertyManagement,
     WhyUs,
     NewBuildings,
+    CalculateMortgage,
     HelloWorld,
   },
 };
