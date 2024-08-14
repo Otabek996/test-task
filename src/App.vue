@@ -4,6 +4,7 @@
     <HeaderCarousel />
     <AboutUs />
     <EstateInvestmentsVue />
+    <PropertyManagement />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
@@ -13,6 +14,7 @@ import NavBar from "./components/NavBar.vue";
 import HeaderCarousel from "./components/HeaderCarousel.vue";
 import AboutUs from "./components/AboutUs.vue";
 import EstateInvestmentsVue from "./components/EstateInvestments.vue";
+import PropertyManagement from "./components/PropertyManagement.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
@@ -22,6 +24,7 @@ export default {
     HeaderCarousel,
     AboutUs,
     EstateInvestmentsVue,
+    PropertyManagement,
     HelloWorld,
   },
 };
