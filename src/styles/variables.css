@@ -1,0 +1,69 @@
+:root {
+  /*======== Fonts ========*/
+  /*= Headline =*/
+  --headline-1-size: 80px;
+  --headline-2-size: 55px;
+  --headline-3-size: 35px;
+  --headline-4-size: 30px;
+
+  --headline-1-line-height: 70px;
+  --headline-2-line-height: 70px;
+  --headline-3-line-height: 51px;
+  --headline-4-line-height: 36px;
+
+  /*= Subtitle =*/
+  --subtitle-25-size: 25px;
+  --subtitle-24-size: 24px;
+
+  --subtitle-25-line-height: 36px;
+  --subtitle-24-line-height: 30px;
+
+  /*= Body =*/
+  --content-size: 20px;
+  --accent-size: 24px;
+  --twenty-size: 20px;
+  --body-18-size: 18px;
+
+  --content-line-height: 29px;
+  --accent-line-height: 35px;
+  --twenty-line-height: 29px;
+  --body-18-line-height: 26px;
+
+  /*= Button =*/
+  --btn-size: 17px;
+  --link-btn-size: 18px;
+  --active-tab-size: 20px;
+
+  --btn-line-height: 25px;
+  --link-btn-line-height: 26px;
+  --active-tab-line-height: 29px;
+
+  /*= Small =*/
+  --label-size: 16px;
+
+  --label-line-height: 23px;
+
+  /*======== Color ========*/
+  /*= Base =*/
+  --white-color: #ffffff;
+
+  /*= Beigie =*/
+  --beigie-100-color: #e1af93;
+  --beigie-70-color: #eac7b4;
+  --beigie-40-color: #f3dfd4;
+  --beigie-120-color: #b48c76;
+
+  /*= Black =*/
+  --black-100-color: #333333;
+  --black-60-color: #858585;
+  --black-20-color: #d6d6d6;
+  --label-color: #b3b3b3;
+  --stroke-color: #eaeaea;
+
+  /*= Bg =*/
+  --grey-color: #f7f7f7;
+  --blue-color: #edf3f5;
+
+  /*= System =*/
+  --red-color: #ff4f4f;
+}
