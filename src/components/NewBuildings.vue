@@ -17,7 +17,7 @@
         </Carousel>
       </div>
 
-      <button type="button">Смотреть все</button>
+      <MainButtonVue class="new-building-button" text="Смотреть все" />
     </div>
   </section>
 </template>
@@ -27,6 +27,8 @@ import { defineComponent } from "vue";
 import { Carousel, Navigation, Slide } from "vue3-carousel";
 
 import "vue3-carousel/dist/carousel.css";
+
+import MainButtonVue from "./MainButton.vue";
 
 import imgOne from "../assets/new-buildings-img-01.png";
 import imgTwo from "../assets/new-buildings-img-02.png";
@@ -39,6 +41,7 @@ export default defineComponent({
     Carousel,
     Slide,
     Navigation,
+    MainButtonVue,
   },
 
   data() {
@@ -73,7 +76,21 @@ export default defineComponent({
   height: 600px;
 }
 
+.new-building-button {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+<style>
 .new-buildings-slider .carousel__prev,
 .new-buildings-slider .carousel__next {
+  color: var(--black-100-color);
+  border-color: var(--black-100-color);
+  top: -93px;
+}
+
+.new-buildings-slider .carousel__prev {
+  left: 1181px;
 }
 </style>
