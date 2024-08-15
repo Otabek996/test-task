@@ -1,40 +1,95 @@
 <template>
-  <b-navbar toggleable="lg">
-    <b-navbar-brand href="#">
-      <img src="../assets/logo.svg" alt="RMC DE LUXE real estate">
-    </b-navbar-brand>
+  <section class="navbar">
+    <div class="container navbar__container">
+      <div class="navbar-left">
+        <a class="navbar-logo-link" href="#">
+          <img class="navbar-logo" src="../assets/logo.svg" alt="Logo" />
+        </a>
+      </div>
 
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <div class="navbar-middle">
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <div class="dropdown">
+              <button
+                class="navbar-link dropdown-button"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="navbar-dropdown-button-text">Услуги</span>
+                <img src="../assets/arrow-bottom.svg" alt="Arrow bottom" />
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-services"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li class="dropdown-item">
+                  <a class="dropdown-link" href="#">Купить</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="dropdown-link" href="#">Арендовать</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="dropdown-link" href="#">Продать</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="dropdown-link" href="#">Оценка недвижимости</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#">О нас</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#">Блог</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
 
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav>
-        <b-nav-item-dropdown text="Услуги" right>
-          <b-dropdown-item href="#">Купить</b-dropdown-item>
-          <b-dropdown-item href="#">Арендовать</b-dropdown-item>
-          <b-dropdown-item href="#">Продать</b-dropdown-item>
-          <b-dropdown-item href="#">Оценка недвижимости</b-dropdown-item>
-        </b-nav-item-dropdown>
+      <div class="navbar-right">
+        <button class="navbar-icons-button search-button" type="button">
+          <img src="../assets/search-icon.svg" alt="Search icon" />
+        </button>
 
-        <b-nav-item href="#">О нас</b-nav-item>
+        <button class="navbar-icons-button fav-button" type="button">
+          <img src="../assets/heard-icon.svg" alt="" />
+        </button>
 
-        <b-nav-item href="#">Блог</b-nav-item>
+        <button class="navbar-icons-button phone-button" type="button">
+          <img src="../assets/phone-icon.svg" alt="Phone icon" />
+        </button>
 
-        <b-nav-item href="#">Контакты</b-nav-item>
-      </b-navbar-nav>
-
-      <b-navbar-nav>
-        <b-nav-form>
-          <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-        </b-nav-form>
-
-        <b-nav-item-dropdown text="Ru" right>
-          <b-dropdown-item href="#">Ru</b-dropdown-item>
-          <b-dropdown-item href="#">Uz</b-dropdown-item>
-          <b-dropdown-item href="#">En</b-dropdown-item>
-        </b-nav-item-dropdown>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
+        <div class="dropdown dropdown-language">
+          <button
+            type="navbar-icons-button button-dropdown-language"
+            id="dropdownMenuButton2"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="current-language">Ru</span>
+            <img src="../assets/arrow-bottom.svg" alt="Arrow down" />
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Ru</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">Uz</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link" href="#">En</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -43,4 +98,109 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.navbar {
+  padding: 20px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.navbar-item,
+.navbar-link {
+  font-size: var(--active-tab-size);
+  line-height: var(--active-tab-line-height);
+  font-weight: 400;
+  color: var(--black-100-color);
+  transition: color 0.1s linear;
+}
+
+.navbar-link:hover {
+  color: var(--beigie-100-color);
+}
+
+.navbar-dropdown-button-text {
+  margin-right: 10px;
+}
+
+.dropdown-menu {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.dropdown-menu-services {
+  width: 300px;
+}
+
+.dropdown-item {
+  border-bottom: 1px solid var(--stroke-color);
+  padding: 10px 16px;
+}
+
+.dropdown-item:hover {
+  background-color: #fcf7f4;
+}
+
+.dropdown-item:hover .dropdown-link {
+  color: var(--beigie-100-color);
+}
+
+.dropdown-link {
+  font-size: var(--body-18-size);
+  line-height: var(--body-18-line-height);
+  font-weight: 400;
+  color: var(--black-100-color);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-icons-button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--stroke-color);
+  border-radius: 50%;
+  transition: border-color 0.1s linear;
+  padding: 13px;
+}
+
+.navbar-icons-button:hover {
+  border-color: var(--beigie-100-color);
+}
+
+.navbar-icons-button img {
+  display: flex;
+  margin: 0 auto;
+}
+
+.phone-button {
+  background-color: var(--black-100-color);
+}
+
+.dropdown-language {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid var(--stroke-color);
+  border-radius: 100px;
+  align-content: center;
+  padding: 10px 16px;
+  transition: border-color 0.1s linear;
+}
+
+.dropdown-language:hover {
+  border-color: var(--beigie-100-color);
+}
+
+.current-language {
+  margin-right: 5px;
+}
+</style>
