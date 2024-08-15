@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <button class="main-button" type="button" v-if="!Boolean(type)">{{ text }}</button>
-    <button class="main-button" :type="type" v-if="Boolean(type)">{{ text }}</button>
-  </div>
+  <button class="main-button" :type="type">{{ text }}</button>
 </template>
 
 <script>
@@ -16,7 +13,7 @@ export default {
     },
     type: {
       type: String,
-      required: true,
+      required: false,
     },
   },
 };
