@@ -5,9 +5,20 @@
 
       <div class="new-buildings-slider">
         <Carousel :itemsToShow="2.7" :wrapAround="true">
-          <Slide v-for="(img, index) in images" :key="index">
+          <Slide v-for="(slider, index) in images" :key="index">
             <div class="carousel__item">
-              <img class="carousel-img" :src="img.img" alt="Building image" />
+              <img class="carousel-img" :src="slider.img" alt="Building image" />
+
+              <div class="carousel-content">
+                <div class="carousel-content-header">
+                  <img src="../assets/liked-slider-icon.svg" alt="Like slider" />
+                </div>
+
+                <div class="carousel-content-body">
+                  <h3 class="carousel-content-title">{{ slider.title }}</h3>
+                  <p class="carousel-content-price">{{ slider.price }}</p>
+                </div>
+              </div>
             </div>
           </Slide>
 
@@ -46,7 +57,12 @@ export default defineComponent({
 
   data() {
     return {
-      images: [{ img: imgOne }, { img: imgTwo }, { img: imgThree }, { img: imgFour }],
+      images: [
+        { img: imgOne, title: "Safa One", price: "от $1 900 000" },
+        { img: imgTwo, title: "Safa Two", price: "от $399 000" },
+        { img: imgThree, title: "Peninsula Two", price: "от $245 000" },
+        { img: imgFour, title: "Marina Vista", price: "от $612 000" },
+      ],
     };
   },
 });
@@ -67,8 +83,34 @@ export default defineComponent({
   margin: 60px 0;
 }
 
-.carousel__slide {
-  opacity: 0.8;
+.carousel-content {
+  width: 467px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 24px;
+}
+
+.carousel-content-header {
+  text-align: end;
+}
+
+.carousel-content-body {
+  text-align: start;
+  color: var(--white-color);
+}
+
+.carousel-content-title {
+  font-size: var(--headline-3-size);
+  line-height: var(--headline-3-line-height);
+  font-weight: 600;
+}
+
+.carousel-content-price {
+  font-size: var(--twenty-size);
+  line-height: var(--twenty-line-height);
+  font-weight: 500;
 }
 
 .carousel-img {
