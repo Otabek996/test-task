@@ -1,5 +1,41 @@
 <template>
   <section class="navbar">
+    <!-- Modal -->
+    <div
+      class="modal fade search-modal-window"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="input-container">
+              <input
+                class="modal-search-input"
+                type="text"
+                placeholder="Введите поисковый запрос..."
+              />
+
+              <button type="button">
+                <img src="../assets/active-search-icon.svg" alt="Search icon" />
+              </button>
+            </div>
+
+            <button
+              type="button"
+              class="close-search-modal-button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <img src="../assets/x-close-icon.svg" alt="Close modal" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container navbar__container">
       <div class="navbar-left">
         <a class="navbar-logo-link" href="#">
@@ -53,7 +89,12 @@
       </div>
 
       <div class="navbar-right">
-        <button class="navbar-icons-button search-button" type="button">
+        <button
+          class="navbar-icons-button search-button"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
           <img src="../assets/search-icon.svg" alt="Search icon" />
         </button>
 
@@ -202,5 +243,52 @@ export default {
 
 .current-language {
   margin-right: 5px;
+}
+
+.show {
+  padding: 0;
+}
+
+.modal-content,
+.modal-body,
+.modal-search-input {
+  border-radius: 100px;
+}
+
+.modal-content {
+  border: none;
+  background: transparent;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.input-container {
+  width: 466px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  background: var(--white-color);
+  padding: 10px 24px;
+}
+
+.modal-search-input {
+  font-size: var(--body-18-size);
+  line-height: var(--body-18-line-height);
+  font-weight: 400;
+  color: var(--label-color);
+  width: 100%;
+  border: none;
+  outline: none;
+  background: var(--white-color);
+  padding: 5px;
+}
+
+.modal-search-input:focus {
+  border: none;
 }
 </style>
