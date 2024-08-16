@@ -24,14 +24,20 @@ const messages = {
     // About us
     aboutUsTitle: "О компании",
     aboutUsMenuTitleOne: "Аренда",
-    aboutUsMenuSubtitleOne:
-      "Широкий выбор объектов: Мы предлагаем разнообразные варианты аренды – от квартир и домов до коммерческих помещений, удовлетворяющие любые потребности Надежные арендаторы: Проведение тщательной проверки и отбора арендаторов для обеспечения стабильного дохода и минимизации рисков",
+    aboutUsMenuSubtitleOneOne:
+      "Широкий выбор объектов: Мы предлагаем разнообразные варианты аренды – от квартир и домов до коммерческих помещений, удовлетворяющие любые потребности.",
+    aboutUsMenuSubtitleOneTwo:
+      "Надежные арендаторы: Проведение тщательной проверки и отбора арендаторов для обеспечения стабильного дохода и минимизации рисков",
     aboutUsMenuTitleTwo: "Купля - продажа",
-    aboutUsMenuSubtitleTwo:
-      "Широкий выбор объектов: Мы предлагаем разнообразные варианты аренды – от квартир и домов до коммерческих помещений, удовлетворяющие любые потребности Надежные арендаторы: Проведение тщательной проверки и отбора арендаторов для обеспечения стабильного дохода и минимизации рисков",
+    aboutUsMenuSubtitleTwoOne:
+      "Широкий выбор объектов: Мы предлагаем разнообразные варианты аренды – от квартир и домов до коммерческих помещений, удовлетворяющие любые потребности.",
+    aboutUsMenuSubtitleTwoTwo:
+      "Надежные арендаторы: Проведение тщательной проверки и отбора арендаторов для обеспечения стабильного дохода и минимизации рисков",
     aboutUsMenuTitleThree: "Управление",
-    aboutUsMenuSubtitleThree:
-      "Широкий выбор объектов: Мы предлагаем разнообразные варианты аренды – от квартир и домов до коммерческих помещений, удовлетворяющие любые потребности Надежные арендаторы: Проведение тщательной проверки и отбора арендаторов для обеспечения стабильного дохода и минимизации рисков",
+    aboutUsMenuSubtitleThreeOne:
+      "Широкий выбор объектов: Мы предлагаем разнообразные варианты аренды – от квартир и домов до коммерческих помещений, удовлетворяющие любые потребности.",
+    aboutUsMenuSubtitleThreeTwo:
+      "Надежные арендаторы: Проведение тщательной проверки и отбора арендаторов для обеспечения стабильного дохода и минимизации рисков",
 
     // Estate investment
     estateInvestmentTitle: "Инвестиции в недвижимость в Дубае",
@@ -166,11 +172,14 @@ const messages = {
     // About us
     aboutUsTitle: "",
     aboutUsMenuTitleOne: "",
-    aboutUsMenuSubtitleOne: "",
+    aboutUsMenuSubtitleOneOne: "",
+    aboutUsMenuSubtitleOneTwo: "",
     aboutUsMenuTitleTwo: "",
-    aboutUsMenuSubtitleTwo: "",
+    aboutUsMenuSubtitleTwoOne: "",
+    aboutUsMenuSubtitleTwoTwo: "",
     aboutUsMenuTitleThree: "",
-    aboutUsMenuSubtitleThree: "",
+    aboutUsMenuSubtitleThreeOne: "",
+    aboutUsMenuSubtitleThreeTwo: "",
 
     // Estate investment
     estateInvestmentTitle: "",
@@ -294,11 +303,14 @@ const messages = {
     // About us
     aboutUsTitle: "",
     aboutUsMenuTitleOne: "",
-    aboutUsMenuSubtitleOne: "",
+    aboutUsMenuSubtitleOneOne: "",
+    aboutUsMenuSubtitleOneTwo: "",
     aboutUsMenuTitleTwo: "",
-    aboutUsMenuSubtitleTwo: "",
+    aboutUsMenuSubtitleTwoOne: "",
+    aboutUsMenuSubtitleTwoTwo: "",
     aboutUsMenuTitleThree: "",
-    aboutUsMenuSubtitleThree: "",
+    aboutUsMenuSubtitleThreeOne: "",
+    aboutUsMenuSubtitleThreeTwo: "",
 
     // Estate investment
     estateInvestmentTitle: "",
