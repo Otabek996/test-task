@@ -14,6 +14,7 @@ const messages = {
     navbarMenuTwo: "О нас",
     navbarMenuThree: "Блог",
     navbarMenuFour: "Контакты",
+    searchInputPlaceholder: "Введите поисковый запрос...",
 
     // Header
     headerTitle: "Найдите идеальное место для жизни",
@@ -155,6 +156,7 @@ const messages = {
     navbarMenuTwo: "",
     navbarMenuThree: "",
     navbarMenuFour: "",
+    searchInputPlaceholder: "",
 
     // Header
     headerTitle: "",
@@ -282,6 +284,7 @@ const messages = {
     navbarMenuTwo: "",
     navbarMenuThree: "",
     navbarMenuFour: "",
+    searchInputPlaceholder: "",
 
     // Header
     headerTitle: "",
