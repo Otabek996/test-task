@@ -162,3 +162,9 @@ export default defineComponent({
   left: 1181px;
 }
 </style>
+
+<style>
+.new-buildings-slider .carousel__viewport {
+  overflow: visible;
+}
+</style>
