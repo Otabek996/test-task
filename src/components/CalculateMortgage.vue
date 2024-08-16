@@ -1,37 +1,41 @@
 <template>
   <section class="calculate-mortgage">
     <div class="container calculate-mortgage__container">
-      <h2 class="calculate-mortgage-title">Рассчитайте ипотеку</h2>
+      <h2 class="calculate-mortgage-title">{{ $t("calculateMortgageTitle") }}</h2>
 
       <div class="form-container">
         <form class="form" action="#">
           <div class="form-box">
             <div class="form-inputs">
               <div class="form-input-box" v-for="(input, index) in inputs" :key="index">
-                <label class="form-label" :for="input.id">{{ input.labelText }}</label>
+                <label class="form-label" :for="input.id">{{ $t(input.labelText) }}</label>
                 <input
                   v-model="input.model"
                   :type="input.type"
                   :id="input.id"
                   class="form-input"
-                  :placeholder="input.placeholder"
+                  :placeholder="$t(input.placeholder)"
                 />
               </div>
             </div>
 
             <div class="form-infos">
               <div class="form-info" v-for="(info, index) in formData" :key="index">
-                <p class="form-info-title">{{ info.title }}</p>
-                <p class="form-info-text">{{ info.text }}</p>
-                <p class="form-info-text">{{ monthlyPayment }}</p>
+                <p class="form-info-title">{{ $t(info.title) }}</p>
+                <p class="form-info-text">{{ $t(info.text) }}</p>
+                <!-- <p class="form-info-text">{{ monthlyPayment }}</p>
                 <p class="form-info-text">{{ loanAmount }}</p>
                 <p class="form-info-text">{{ ratePercent }}</p>
-                <p class="form-info-text">{{ lastPaymentDate }}</p>
+                <p class="form-info-text">{{ lastPaymentDate }}</p> -->
               </div>
             </div>
           </div>
 
-          <MainButton text="Рассчитать" type="button" @click="calculateMortgage" />
+          <MainButton
+            :text="$t('calculateMortgageButton')"
+            type="button"
+            @click="calculateMortgage"
+          />
         </form>
       </div>
     </div>
@@ -56,37 +60,37 @@ export default {
         {
           id: "cost-of-real-estate",
           type: "number",
-          placeholder: "Введите стоимость",
+          placeholder: "calculateMortgageInputOnePlaceholder",
           model: "costInputValue",
-          labelText: "Стоимость недвижимости (у.е.)",
+          labelText: "calculateMortgageInputOneTitle",
         },
         {
           id: "initial-contribution",
           type: "number",
-          placeholder: "Введите размер взноса",
+          placeholder: "calculateMortgageInputTwoPlaceholder",
           model: "initialPaymentInputValue",
-          labelText: "Первоначальный взнос (у.е.)",
+          labelText: "calculateMortgageInputTwoTitle",
         },
         {
           id: "term-in-years",
           type: "number",
-          placeholder: "Введите срок",
+          placeholder: "calculateMortgageInputThreePlaceholder",
           model: "termYearsInputValue",
-          labelText: "Срок в годах",
+          labelText: "calculateMortgageInputThreeTitle",
         },
         {
           id: "bid-amount",
           type: "number",
-          placeholder: "Введите размер ставки",
+          placeholder: "calculateMortgageInputFourPlaceholder",
           model: "ratePercentInputValue",
-          labelText: "Ставка (%)",
+          labelText: "calculateMortgageInputFourTitle",
         },
       ],
       formData: [
-        { title: "Ежемесячный платеж", text: "4 410 у.е." },
-        { title: "Сумма кредита", text: "200 000 у.е." },
-        { title: "Процентная ставка", text: "24%" },
-        { title: "Дата последнего платежа", text: "28 июля 2034 г" },
+        { title: "calculateMortgageResultOneTitle", text: "calculateMortgageResultOne" },
+        { title: "calculateMortgageResultTwoTitle", text: "calculateMortgageResultTwo" },
+        { title: "calculateMortgageResultThreeTitle", text: "calculateMortgageResultThree" },
+        { title: "calculateMortgageResultFourTitle", text: "calculateMortgageResultFour" },
       ],
     };
   },
@@ -98,7 +102,12 @@ export default {
       const termYearsInputValue = ref("");
       const ratePercentInputValue = ref("");
 
-      console.log(costInputValue.value, initialPaymentInputValue.value, termYearsInputValue.value, ratePercentInputValue.value);
+      console.log(
+        costInputValue.value,
+        initialPaymentInputValue.value,
+        termYearsInputValue.value,
+        ratePercentInputValue.value
+      );
 
       const loanAmount = costInputValue.value - initialPaymentInputValue.value;
       const rate = ratePercentInputValue.value / 100 / 12;

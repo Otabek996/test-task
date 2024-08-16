@@ -13,12 +13,10 @@
       <div class="container carousel-content-container">
         <div class="carousel-content-box">
           <h1 class="header-title">
-            Найдите <br />
-            идеальное место <br />
-            для жизни
+            {{ $t("headerTitle") }}
           </h1>
-          <p class="header-text">Откройте двери в новое будущее с нами</p>
-          <MainButton class="carousel-content-button" type="button" text="Подробнее" />
+          <p class="header-text">{{ $t("headerSubtitle") }}</p>
+          <MainButton class="carousel-content-button" type="button" :text="$t('headerButton')" />
         </div>
 
         <div class="carousel-buttons-box">

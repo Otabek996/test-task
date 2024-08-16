@@ -4,8 +4,8 @@
       <div class="about-us-info">
         <div>
           <h2 class="about-us-title">
-            О компании <br />
-            <span>RMC DE LUXE</span>
+            {{ $t("aboutUsTitle") }} <br />
+            <span>{{ $t("companyName") }}</span>
           </h2>
         </div>
 
@@ -23,24 +23,23 @@
                 <v-tab
                   v-if="item.value === 'tab-1' || item.value === 'tab-3'"
                   class="about-us-cards-title text-none p-0"
-                  :text="item.title"
+                  :text="$t(item.title)"
                   :value="item.value"
                 ></v-tab>
                 <v-tab
                   v-if="item.value === 'tab-2'"
                   class="about-us-cards-title text-none mx-auto p-0"
-                  :text="item.title"
+                  :text="$t(item.title)"
                   :value="item.value"
                 ></v-tab>
               </template>
 
               <template v-slot:item="{ item }">
                 <v-tabs-window-item class="about-us-cards-text" :value="item.value">
-                  Широкий выбор объектов: Мы предлагаем разнообразные варианты аренды - от квартир и
-                  домов до коммерческих помещений, удовлетворяющие любые потребности <br />
+                  {{ $t(item.subtitleOne) }}
                   <br />
-                  Надежные арендаторы: Проведение тщательной проверки и отбора арендаторов для
-                  обеспечения стабильного дохода и минимизации рисков
+                  <br />
+                  {{ $t(item.subtitleTwo) }}
                 </v-tabs-window-item>
               </template>
             </v-tabs>
@@ -95,15 +94,21 @@ export default defineComponent({
     tab: "tab-1",
     tabs: [
       {
-        title: "Аренда",
+        title: "aboutUsMenuTitleOne",
+        subtitleOne: "aboutUsMenuSubtitleOneOne",
+        subtitleTwo: "aboutUsMenuSubtitleOneTwo",
         value: "tab-1",
       },
       {
-        title: "Купля - продажа",
+        title: "aboutUsMenuTitleTwo",
+        subtitleOne: "aboutUsMenuSubtitleTwoOne",
+        subtitleTwo: "aboutUsMenuSubtitleTwoTwo",
         value: "tab-2",
       },
       {
-        title: "Управление",
+        title: "aboutUsMenuTitleThree",
+        subtitleOne: "aboutUsMenuSubtitleThreeOne",
+        subtitleTwo: "aboutUsMenuSubtitleThreeTwo",
         value: "tab-3",
       },
     ],

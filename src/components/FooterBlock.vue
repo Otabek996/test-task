@@ -22,41 +22,41 @@
 
       <div class="footer-body">
         <div class="footer-col">
-          <h5 class="footer-title">Услуги</h5>
+          <h5 class="footer-title">{{ $t("footerMenuOneTitle") }}</h5>
 
           <ul class="footer-menu">
             <a class="footer-link" href="#" v-for="(text, index) in services" :key="index">
-              <li class="footer-item">{{ text }}</li>
+              <li class="footer-item">{{ $t(text) }}</li>
             </a>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h5 class="footer-title">Недвижимость</h5>
+          <h5 class="footer-title">{{ $t("footerMenuTwoTitle") }}</h5>
 
           <ul class="footer-menu">
             <a class="footer-link" href="#" v-for="(text, index) in estate" :key="index">
-              <li class="footer-item">{{ text }}</li>
+              <li class="footer-item">{{ $t(text) }}</li>
             </a>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h5 class="footer-title">Компания</h5>
+          <h5 class="footer-title">{{ $t("footerMenuThreeTitle") }}</h5>
 
           <ul class="footer-menu">
             <a class="footer-link" href="#" v-for="(text, index) in company" :key="index">
-              <li class="footer-item">{{ text }}</li>
+              <li class="footer-item">{{ $t(text) }}</li>
             </a>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h5 class="footer-title">Другое</h5>
+          <h5 class="footer-title">{{ $t("footerMenuFourTitle") }}</h5>
 
           <ul class="footer-menu">
             <a class="footer-link" href="#" v-for="(text, index) in others" :key="index">
-              <li class="footer-item">{{ text }}</li>
+              <li class="footer-item">{{ $t(text) }}</li>
             </a>
           </ul>
         </div>
@@ -64,7 +64,7 @@
 
       <div class="footer-bottom">
         <div>
-          <p>2024 © RMC De Luxe real estate LLC. Все права защищены</p>
+          <p>2024 © RMC De Luxe real estate LLC. {{ $t("footerRights") }}</p>
         </div>
 
         <div>
@@ -93,13 +93,18 @@ export default {
         { icon: FacebookIcon, alt: "Facebook Icon" },
       ],
 
-      services: ["Купить", "Арендовать", "Продать", "Оценить"],
+      services: ["footerMenuOneOne", "footerMenuOneTwo", "footerMenuOneThree", "footerMenuOneFour"],
 
-      estate: ["Квартиры", "Новостройки", "Дома и участки", "Коммерческая"],
+      estate: ["footerMenuTwoOne", "footerMenuTwoTwo", "footerMenuTwoThree", "footerMenuTwoFour"],
 
-      company: ["О нас", "Блог", "Контакты", "Связаться"],
+      company: [
+        "footerMenuThreeOne",
+        "footerMenuThreeTwo",
+        "footerMenuThreeThree",
+        "footerMenuThreeFour",
+      ],
 
-      others: ["Ипотечный калькулятор", "Инвестиции в недвижимость в Дубае"],
+      others: ["footerMenuFourOne", "footerMenuFourTwo"],
     };
   },
 };

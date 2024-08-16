@@ -1,7 +1,7 @@
 <template>
   <section class="new-buildings">
     <div class="container new-buildings__container">
-      <h2 class="new-buildings-title">Новостройки</h2>
+      <h2 class="new-buildings-title">{{ $t("newBuildingsTitle") }}</h2>
 
       <div class="new-buildings-slider">
         <Carousel :itemsToShow="2.7" :wrapAround="true">
@@ -15,8 +15,8 @@
                 </div>
 
                 <div class="carousel-content-body">
-                  <h3 class="carousel-content-title">{{ slider.title }}</h3>
-                  <p class="carousel-content-price">{{ slider.price }}</p>
+                  <h3 class="carousel-content-title">{{ $t(slider.title) }}</h3>
+                  <p class="carousel-content-price">{{ $t(slider.price) }}</p>
                 </div>
               </div>
             </div>
@@ -28,7 +28,7 @@
         </Carousel>
       </div>
 
-      <MainButtonVue class="new-building-button" text="Смотреть все" />
+      <MainButtonVue class="new-building-button" :text="$t('newBuildingsButton')" />
     </div>
   </section>
 </template>
@@ -58,10 +58,10 @@ export default defineComponent({
   data() {
     return {
       images: [
-        { img: imgOne, title: "Safa One", price: "от $1 900 000" },
-        { img: imgTwo, title: "Safa Two", price: "от $399 000" },
-        { img: imgThree, title: "Peninsula Two", price: "от $245 000" },
-        { img: imgFour, title: "Marina Vista", price: "от $612 000" },
+        { img: imgOne, title: "newBuildingsOneTitle", price: "newBuildingsOnePrice" },
+        { img: imgTwo, title: "newBuildingsTwoTitle", price: "newBuildingsTwoPrice" },
+        { img: imgThree, title: "newBuildingsThreeTitle", price: "newBuildingsThreePrice" },
+        { img: imgFour, title: "newBuildingsFourTitle", price: "newBuildingsFourPrice" },
       ],
     };
   },

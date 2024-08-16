@@ -1,13 +1,18 @@
 <template>
   <section class="why-us">
     <div class="container why-us__container">
-      <h2 class="why-us-title">Почему выбирают нас</h2>
+      <h2 class="why-us-title">{{ $t("whyUsTitle") }}</h2>
 
       <div class="why-us-box">
         <div class="why-us-card" v-for="item in info" :key="item.id">
-          <h4 class="why-us-card-title">{{ item.title }}</h4>
-          <p class="why-us-card-text">{{ item.description }}</p>
-          <img class="why-us-card-img" v-if="item.img != undefined" :src="item.img" alt="Decoration image" />
+          <h4 class="why-us-card-title" v-if="!Boolean(item.img)">{{ $t(item.title) }}</h4>
+          <p class="why-us-card-text" v-if="!Boolean(item.img)">{{ $t(item.description) }}</p>
+          <img
+            class="why-us-card-img"
+            v-if="Boolean(item.img)"
+            :src="item.img"
+            alt="Decoration image"
+          />
         </div>
       </div>
     </div>
@@ -28,9 +33,8 @@ export default {
       info: [
         {
           id: 1,
-          title: "Опыт и профессионализм",
-          description:
-            "Наши специалисты имеют многолетний опыт в различных сферах недвижимости, что гарантирует высокое качество услуг",
+          title: "whyUsBoxOneTitle",
+          description: "whyUsBoxOneDescription",
         },
         {
           id: 2,
@@ -38,9 +42,8 @@ export default {
         },
         {
           id: 3,
-          title: "Прозрачность и доверие",
-          description:
-            "Обеспечение полной прозрачности всех операций и предоставление отчетов. Работа основана на принципах честности и доверия, что подтверждается отзывами",
+          title: "whyUsBoxTwoTitle",
+          description: "whyUsBoxTwoDescription",
         },
         {
           id: 4,
@@ -48,8 +51,8 @@ export default {
         },
         {
           id: 5,
-          title: "Высокий уровень обслуживания",
-          description: "Мы всегда на связи, чтобы помочь вам в любое время",
+          title: "whyUsBoxThreeTitle",
+          description: "whyUsBoxThreeDescription",
         },
         {
           id: 6,
@@ -57,9 +60,8 @@ export default {
         },
         {
           id: 7,
-          title: "Индивидуальный подход",
-          description:
-            "Мы разрабатываем персонализированные решения, учитывая уникальные потребности каждого клиента",
+          title: "whyUsBoxFourTitle",
+          description: "whyUsBoxFourDescription",
         },
         {
           id: 8,
@@ -67,9 +69,8 @@ export default {
         },
         {
           id: 9,
-          title: "Комплексное обслуживание",
-          description:
-            "Полный спектр услуг, включающий аренду, куплю-продажу, управление и инвестиции в недвижимость.",
+          title: "whyUsBoxFiveTitle",
+          description: "whyUsBoxFiveDescription",
         },
       ],
     };

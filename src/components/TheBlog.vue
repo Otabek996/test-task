@@ -1,7 +1,7 @@
 <template>
   <section class="the-blog">
     <div class="container the-blog__container">
-      <h2 class="the-blog-title">Блог</h2>
+      <h2 class="the-blog-title">{{ $t("blogTitle") }}</h2>
 
       <div class="the-blog-box">
         <div class="blog" v-for="(blog, index) in blogs" :key="index">
@@ -22,17 +22,17 @@
           </a>
 
           <div class="blog-content">
-            <p class="blog-title">{{ blog.text }}</p>
+            <p class="blog-title">{{ $t(blog.text) }}</p>
 
             <a class="more-info-link" href="#">
-              <span>Подробнее</span>
+              <span>{{ $t("blogFullButton") }}</span>
               <img src="../assets/array-right.svg" alt="Array right" />
             </a>
           </div>
         </div>
       </div>
 
-      <MainButton class="all-blogs-button" text="Все статьи" type="button" />
+      <MainButton class="all-blogs-button" :text="$t('blogButton')" type="button" />
     </div>
   </section>
 </template>
@@ -58,19 +58,19 @@ export default {
           img: blogImgOne,
           data: "31.07.2024",
           views: 899,
-          text: "Тенденции и прогнозы рынка недвижимости на 2024 год",
+          text: "blogOneTitle",
         },
         {
           img: blogImgTwo,
           data: "31.07.2024",
           views: 899,
-          text: "Лучшие районы для инвестиций в недвижимость",
+          text: "blogTwoTitle",
         },
         {
           img: blogImgThree,
           data: "31.07.2024",
           views: 899,
-          text: "Топ-10 новых жилых комплексов",
+          text: "blogThreeTitle",
         },
       ],
     };

@@ -2,16 +2,20 @@
   <section class="contact-form">
     <div class="container contact-form__container">
       <div class="contact-form-left">
-        <h2 class="contact-form-title">Остались вопросы? Свяжитесь с нами</h2>
+        <h2 class="contact-form-title">{{ $t("contactFormTitle") }}</h2>
 
         <form action="#">
           <div class="inputs-box">
             <div v-for="(input, index) in inputs" :key="index">
-              <input class="contact-input" :type="input.type" :placeholder="input.placeholder" />
+              <input
+                class="contact-input"
+                :type="input.type"
+                :placeholder="$t(input.placeholder)"
+              />
             </div>
           </div>
 
-          <MainButton text="Отправить" type="submit" />
+          <MainButton :text="$t('contactFormButton')" type="submit" />
         </form>
       </div>
 
@@ -37,19 +41,19 @@ export default {
       inputs: [
         {
           type: "text",
-          placeholder: "ФИО",
+          placeholder: "contactFormInputOnePlaceholder",
         },
         {
           type: "text",
-          placeholder: "Номер телефона",
+          placeholder: "contactFormInputTwoPlaceholder",
         },
         {
           type: "email",
-          placeholder: "E-mail",
+          placeholder: "contactFormInputThreePlaceholder",
         },
         {
           type: "text",
-          placeholder: "Ваш вопрос",
+          placeholder: "contactFormInputFourPlaceholder",
         },
       ],
     };

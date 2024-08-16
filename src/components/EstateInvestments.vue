@@ -2,33 +2,19 @@
   <section class="investments">
     <div class="container investments__container">
       <div class="investments-info">
-        <h2 class="investments-title">Инвестиции в недвижимость в Дубае</h2>
+        <h2 class="investments-title">{{ $t("estateInvestmentTitle") }}</h2>
 
         <p class="investments-description">
-          <span>
-            Недвижимость в Дубае предоставляет отличные возможности для получения стабильного дохода
-            и увеличения капитала. <br />
-          </span>
+          <span> {{ $t("estateInvestmentDescriptionOne") }} <br /> </span>
 
-          <span>
-            Полный цикл инвестиций: От анализа рынка и подбора объектов до управления инвестициями и
-            их реализации. <br />
-          </span>
+          <span> {{ $t("estateInvestmentDescriptionTwo") }} <br /> </span>
 
-          <span
-            >Наши эксперты помогут вам на всех этапах инвестиционного процесса, обеспечивая высокое
-            качество обслуживания и надежность. <br
-          /></span>
+          <span> {{ $t("estateInvestmentDescriptionThree") }} <br /></span>
 
-          <span
-            >Наши услуги включают управление вашей инвестиционной недвижимостью, обеспечивая её
-            сохранность и стабильный доход. Мы берем на себя все аспекты управления, включая подбор
-            и проверку арендаторов, техническое обслуживание, финансовую отчетность и юридическую
-            поддержку. <br
-          /></span>
+          <span> {{ $t("estateInvestmentDescriptionFour") }} <br /></span>
         </p>
 
-        <MainButton text="Click me" />
+        <MainButton :text="$t('estateInvestmentButton')" />
       </div>
 
       <div class="investments-pictures">

@@ -1,10 +1,7 @@
 <template>
   <section class="management">
     <div class="container management__container">
-      <h2 class="management-title">
-        Что входит в услугу <br />
-        управления недвижимостью
-      </h2>
+      <h2 class="management-title">{{ $t("servicesTitle") }}</h2>
 
       <div class="services">
         <table>
@@ -17,7 +14,7 @@
                   alt="Checked icon"
                 />
               </td>
-              <td>{{ service.name }}</td>
+              <td>{{ $t(service.name) }}</td>
             </tr>
           </tbody>
 
@@ -30,7 +27,7 @@
                   alt="Checked icon"
                 />
               </td>
-              <td>{{ service.name }}</td>
+              <td>{{ $t(service.name) }}</td>
             </tr>
           </tbody>
         </table>
@@ -48,41 +45,41 @@ export default {
       servicesOne: [
         {
           id: 1,
-          name: "Проверка арендаторов (кредитная история, рекомендации)",
+          name: "servicesOne",
         },
         {
           id: 2,
-          name: "Подготовка и подписание договоров аренды",
+          name: "servicesTwo",
         },
         {
           id: 3,
-          name: "Сбор арендной платы",
+          name: "servicesThree",
         },
         {
           id: 4,
-          name: "Обработка запросов и жалоб арендаторов",
+          name: "servicesFour",
         },
         {
           id: 5,
-          name: "Контроль соблюдения условий аренды",
+          name: "servicesFive",
         },
       ],
       servicesTwo: [
         {
           id: 6,
-          name: "Регулярное техническое обслуживание",
+          name: "servicesSix",
         },
         {
           id: 7,
-          name: "Организация и проведение ремонтных работ",
+          name: "servicesSeven",
         },
         {
           id: 8,
-          name: "Контроль за состоянием недвижимости",
+          name: "servicesEight",
         },
         {
           id: 9,
-          name: "Подбор надежных арендаторов",
+          name: "servicesNine",
         },
       ],
     };
