@@ -120,11 +120,13 @@ export default defineComponent({
 
 .carousel-content-header {
   text-align: end;
+  cursor: pointer;
 }
 
 .carousel-content-body {
   text-align: start;
   color: var(--white-color);
+  cursor: pointer;
 }
 
 .carousel-content-title {
