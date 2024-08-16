@@ -15,7 +15,7 @@
               <input
                 class="modal-search-input"
                 type="text"
-                placeholder="Введите поисковый запрос..."
+                :placeholder="$t('searchInputPlaceholder')"
               />
 
               <button type="button">
@@ -54,7 +54,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <span class="navbar-dropdown-button-text">Услуги</span>
+                <span class="navbar-dropdown-button-text">{{ $t("navbarMenuOneDropdown") }}</span>
                 <img src="../assets/arrow-bottom.svg" alt="Arrow bottom" />
               </button>
               <ul
@@ -62,28 +62,28 @@
                 aria-labelledby="dropdownMenuButton1"
               >
                 <li class="dropdown-item">
-                  <a class="dropdown-link" href="#">Купить</a>
+                  <a class="dropdown-link" href="#">{{ $t("navbarDropdownMenuOne") }}</a>
                 </li>
                 <li class="dropdown-item">
-                  <a class="dropdown-link" href="#">Арендовать</a>
+                  <a class="dropdown-link" href="#">{{ $t("navbarDropdownMenuTwo") }}</a>
                 </li>
                 <li class="dropdown-item">
-                  <a class="dropdown-link" href="#">Продать</a>
+                  <a class="dropdown-link" href="#">{{ $t("navbarDropdownMenuThree") }}</a>
                 </li>
                 <li class="dropdown-item">
-                  <a class="dropdown-link" href="#">Оценка недвижимости</a>
+                  <a class="dropdown-link" href="#">{{ $t("navbarDropdownMenuFour") }}</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="navbar-item">
-            <a class="navbar-link" href="#">О нас</a>
+            <a class="navbar-link" href="#">{{ $t("navbarMenuTwo") }}</a>
           </li>
           <li class="navbar-item">
-            <a class="navbar-link" href="#">Блог</a>
+            <a class="navbar-link" href="#">{{ $t("navbarMenuThree") }}</a>
           </li>
           <li class="navbar-item">
-            <a class="navbar-link" href="#">Контакты</a>
+            <a class="navbar-link" href="#">{{ $t("navbarMenuFour") }}</a>
           </li>
         </ul>
       </div>
