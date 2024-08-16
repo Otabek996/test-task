@@ -1,10 +1,22 @@
 <template>
   <section class="new-buildings">
     <div class="container new-buildings__container">
-      <h2 class="new-buildings-title">{{ $t("newBuildingsTitle") }}</h2>
+      <div class="new-buildings-header">
+        <h2 class="new-buildings-title">{{ $t("newBuildingsTitle") }}</h2>
+
+        <div class="carousel-buttons-box">
+          <button class="carousel-arrow" @click="prev">
+            <img src="../assets/new-buildings-arrow-left.svg" alt="Carousel arrow left" />
+          </button>
+
+          <button class="carousel-arrow" @click="next">
+            <img src="../assets/new-buildings-arrow-right.svg" alt="Carousel arrow right" />
+          </button>
+        </div>
+      </div>
 
       <div class="new-buildings-slider">
-        <Carousel :itemsToShow="2.7" :wrapAround="true">
+        <Carousel :itemsToShow="2.7" :wrapAround="true" ref="carousel">
           <Slide v-for="(slider, index) in images" :key="index">
             <div class="carousel__item">
               <img class="carousel-img" :src="slider.img" alt="Building image" />
@@ -21,10 +33,6 @@
               </div>
             </div>
           </Slide>
-
-          <template #addons>
-            <Navigation />
-          </template>
         </Carousel>
       </div>
 
@@ -35,7 +43,7 @@
 
 <script>
 import { defineComponent } from "vue";
-import { Carousel, Navigation, Slide } from "vue3-carousel";
+import { Carousel, Slide } from "vue3-carousel";
 
 import "vue3-carousel/dist/carousel.css";
 
@@ -51,7 +59,6 @@ export default defineComponent({
   components: {
     Carousel,
     Slide,
-    Navigation,
     MainButtonVue,
   },
 
@@ -65,12 +72,31 @@ export default defineComponent({
       ],
     };
   },
+
+  methods: {
+    next() {
+      this.$refs.carousel.next();
+    },
+    prev() {
+      this.$refs.carousel.prev();
+    },
+  },
 });
 </script>
 
 <style scoped>
 .new-buildings__container {
   padding: 230px 0;
+}
+
+.new-buildings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-arrow {
+  border: 1.5px solid var(--black-100-color);
 }
 
 .new-buildings-title {
