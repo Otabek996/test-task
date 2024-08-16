@@ -11,7 +11,6 @@
     <ContactForm />
     <TheBlog />
     <FooterBlock />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
@@ -27,7 +26,6 @@ import CalculateMortgage from "./components/CalculateMortgage.vue";
 import ContactForm from "./components/ContactForm.vue";
 import TheBlog from "./components/TheBlog.vue";
 import FooterBlock from "./components/FooterBlock.vue";
-import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "App",
@@ -43,7 +41,6 @@ export default {
     ContactForm,
     TheBlog,
     FooterBlock,
-    HelloWorld,
   },
 };
 </script>

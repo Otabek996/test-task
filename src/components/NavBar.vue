@@ -113,18 +113,18 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            <span class="current-language">Ru</span>
+            <template v-for="entry in languages">
+              <span class="current-language" v-if="entry.active === true" :key="entry.id">{{
+                entry.title
+              }}</span>
+            </template>
             <img src="../assets/arrow-bottom.svg" alt="Arrow down" />
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-            <li class="dropdown-item">
-              <a class="dropdown-link" href="#">Ru</a>
-            </li>
-            <li class="dropdown-item">
-              <a class="dropdown-link" href="#">Uz</a>
-            </li>
-            <li class="dropdown-item">
-              <a class="dropdown-link" href="#">En</a>
+            <li class="dropdown-item" v-for="entry in languages" :key="entry.id">
+              <button class="dropdown-link" type="button" @click="changeLocale(entry.language)">
+                {{ entry.title }}
+              </button>
             </li>
           </ul>
         </div>
@@ -136,6 +136,31 @@
 <script>
 export default {
   name: "NavBar",
+
+  data() {
+    return {
+      languages: [
+        { id: 0, language: "ru", title: "Ru", active: true },
+        // { id: 1, language: "uz", title: "Uz", active: false },
+        { id: 2, language: "en", title: "En", active: false },
+      ],
+    };
+  },
+
+  methods: {
+    changeLocale(locale) {
+      this.$i18n.locale = locale;
+
+      const activeLang = locale;
+      for (let index in this.languages) {
+        if (this.languages[index].language === activeLang) {
+          this.languages[index].active = true;
+        } else {
+          this.languages[index].active = false;
+        }
+      }
+    },
+  },
 };
 </script>
 
@@ -191,10 +216,13 @@ export default {
 }
 
 .dropdown-link {
+  width: 100%;
   font-size: var(--body-18-size);
   line-height: var(--body-18-line-height);
   font-weight: 400;
   color: var(--black-100-color);
+  text-align: start;
+  cursor: pointer;
 }
 
 .navbar-right {
