@@ -196,4 +196,20 @@ export default defineComponent({
 .about-us-slider .carousel__next {
   left: 105px;
 }
+
+@media screen and (max-width: 1200px) {
+  .about-us-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .about-us-info div {
+    width: 100%;
+  }
+
+  .about-us-cards {
+    width: 100% !important;
+  }
+}
 </style>

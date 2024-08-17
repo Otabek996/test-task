@@ -16,7 +16,26 @@
       </div>
 
       <div class="new-buildings-slider">
-        <Carousel :itemsToShow="2.7" :wrapAround="true" ref="carousel">
+        <Carousel v-if="windowWidth > 1400" :itemsToShow="2.7" :wrapAround="true" ref="carousel">
+          <Slide v-for="(slider, index) in images" :key="index">
+            <div class="carousel__item">
+              <img class="carousel-img" :src="slider.img" alt="Building image" />
+
+              <div class="carousel-content">
+                <div class="carousel-content-header">
+                  <img src="../assets/liked-slider-icon.svg" alt="Like slider" />
+                </div>
+
+                <div class="carousel-content-body">
+                  <h3 class="carousel-content-title">{{ $t(slider.title) }}</h3>
+                  <p class="carousel-content-price">{{ $t(slider.price) }}</p>
+                </div>
+              </div>
+            </div>
+          </Slide>
+        </Carousel>
+
+        <Carousel v-if="windowWidth < 1400" :itemsToShow="2.3" :wrapAround="true" ref="carousel">
           <Slide v-for="(slider, index) in images" :key="index">
             <div class="carousel__item">
               <img class="carousel-img" :src="slider.img" alt="Building image" />
@@ -42,7 +61,7 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref, onMounted, onUnmounted } from "vue";
 import { Carousel, Slide } from "vue3-carousel";
 
 import "vue3-carousel/dist/carousel.css";
@@ -80,6 +99,26 @@ export default defineComponent({
     prev() {
       this.$refs.carousel.prev();
     },
+  },
+
+  setup() {
+    const windowWidth = ref(window.innerWidth);
+
+    const updateWidth = () => {
+      windowWidth.value = window.innerWidth;
+    };
+
+    onMounted(() => {
+      window.addEventListener("resize", updateWidth);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener("resize", updateWidth);
+    });
+
+    return {
+      windowWidth,
+    };
   },
 });
 </script>

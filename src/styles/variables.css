@@ -43,6 +43,20 @@
 
   --label-line-height: 23px;
 
+  @media screen and (max-width: 768px) {
+    /*======== Fonts ========*/
+    /*= Headline =*/
+    --headline-1-size: 65px;
+    --headline-2-size: 45px;
+    --headline-3-size: 30px;
+    --headline-4-size: 30px;
+
+    --headline-1-line-height: 70px;
+    --headline-2-line-height: 50px;
+    --headline-3-line-height: 44px;
+    --headline-4-line-height: 36px;
+  }
+
   /*======== Color ========*/
   /*= Base =*/
   --white-color: #ffffff;

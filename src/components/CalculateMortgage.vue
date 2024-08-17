@@ -232,4 +232,24 @@ input[type="number"] {
   font-weight: 500;
   color: var(--black-100-color);
 }
+
+@media screen and (max-width: 1200px) {
+  .form-box {
+    justify-content: center;
+  }
+
+  .form-inputs,
+  .form-infos {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+  }
+
+  .form-inputs {
+    padding-right: 40px;
+  }
+
+  .form-infos {
+    padding-left: 40px;
+  }
+}
 </style>

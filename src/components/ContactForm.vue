@@ -107,4 +107,23 @@ export default {
   border: none;
   border-bottom: 1px solid var(--beigie-100-color);
 }
+
+@media screen and (max-width: 1200px) {
+  .contact-form__container {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .contact-form-right {
+    width: 100%;
+    height: 490px;
+  }
+
+  .contact-form-right img {
+    width: 100%;
+    height: 490px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
 </style>
