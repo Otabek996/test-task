@@ -108,7 +108,8 @@
 
         <div class="dropdown dropdown-language">
           <button
-            type="navbar-icons-button button-dropdown-language"
+            class="button-dropdown-language"
+            type="navbar-icons-button"
             id="dropdownMenuButton2"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -188,6 +189,11 @@ export default {
   color: var(--beigie-100-color);
 }
 
+.navbar-middle .dropdown-link {
+  display: block;
+  width: 100%;
+}
+
 .navbar-dropdown-button-text {
   margin-right: 10px;
 }
@@ -204,7 +210,7 @@ export default {
 
 .dropdown-item {
   border-bottom: 1px solid var(--stroke-color);
-  padding: 10px 16px;
+  padding: 0;
 }
 
 .dropdown-item:hover {
@@ -222,6 +228,7 @@ export default {
   font-weight: 400;
   color: var(--black-100-color);
   text-align: start;
+  padding: 10px 16px;
   cursor: pointer;
 }
 
@@ -261,8 +268,12 @@ export default {
   border: 1px solid var(--stroke-color);
   border-radius: 100px;
   align-content: center;
-  padding: 10px 16px;
+  /* padding: 10px 16px; */
   transition: border-color 0.1s linear;
+}
+
+.button-dropdown-language {
+  width: 100%;
 }
 
 .dropdown-language:hover {

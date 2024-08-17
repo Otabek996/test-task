@@ -126,6 +126,7 @@ export default defineComponent({
 }
 
 .header-title {
+  width: 715px;
   font-size: var(--headline-1-size);
   line-height: var(--headline-1-line-height);
   font-weight: 500;
